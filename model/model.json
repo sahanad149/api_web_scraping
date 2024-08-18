@@ -1,0 +1,47 @@
+{
+    "modelTopology": {
+      "keras_version": "2.6.0",
+      "backend": "tensorflow",
+      "model_config": {
+        "class_name": "Sequential",
+        "config": {
+          "layers": [
+            {
+              "class_name": "Dense",
+              "config": {
+                "units": 64,
+                "activation": "relu",
+                "kernel_initializer": "glorot_uniform",
+                "bias_initializer": "zeros",
+                "name": "dense"
+              }
+            },
+            {
+              "class_name": "Dense",
+              "config": {
+                "units": 10,
+                "activation": "softmax",
+                "kernel_initializer": "glorot_uniform",
+                "bias_initializer": "zeros",
+                "name": "output"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "weightsManifest": {
+      "weights": [
+        {
+          "name": "dense/kernel",
+          "shape": [10, 64],
+          "dtype": "float32"
+        },
+        {
+          "name": "dense/bias",
+          "shape": [64],
+          "dtype": "float32"
+        }
+      ]
+    }
+  }  

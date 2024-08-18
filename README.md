@@ -25,3 +25,28 @@ Install additional middlewares:
     npm install cors morgan dotenv
         cors - allows cross-origin requests
         morgan - HTTP request logger for debugging
+Install Puppeteer. It is a Node.js library that provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol. It’s ideal for web scraping tasks.
+    npm install puppeteer
+
+Postman output for /scrape:
+{
+    "url": "https://example.com",
+    "data": {
+        "title": "Example Domain",
+        "content": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information..."
+    },
+    "category": "Uncategorized",
+    "_id": "66c18e4e4c450bc30188de27",
+    "scrapedAt": "2024-08-18T06:01:50.296Z",
+    "__v": 0
+}
+
+The output on postman explained:
+    url: The URL that was provided for scraping.
+    data:
+    title: The title of the page, which is "Example Domain" in this case.
+    content: The text content extracted from the page’s body.
+    category: A placeholder category, "Uncategorized", which you can later update or classify using your AI model.
+    _id: The unique identifier for the document in MongoDB, automatically generated.
+    scrapedAt: The timestamp indicating when the data was scraped, showing "2024-08-18T06:01:50.296Z" in ISO 8601 format.
+    __v: The version key used by Mongoose to handle document revisions.
