@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#scrape-form {
+    margin: 20px 0;
+}
+
+#results {
+    margin-top: 20px;
+}
